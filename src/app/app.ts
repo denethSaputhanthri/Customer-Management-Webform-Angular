@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { Dashborad } from "./page/dashborad/dashborad";
 
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Dashborad],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

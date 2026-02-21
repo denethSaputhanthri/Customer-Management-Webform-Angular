@@ -1,0 +1,139 @@
+<div class="dash">
+	<header class="dash__topbar">
+		<div class="brand">
+			<span class="brand__mark">☰</span>
+			<span class="brand__name">Untitled UI</span>
+		</div>
+
+		<nav class="topnav" aria-label="Primary">
+			<a class="topnav__link is-active" href="#">Home</a>
+			<a class="topnav__link" href="#">Customers</a>
+			<a class="topnav__link" href="#">Projects</a>
+			<a class="topnav__link" href="#">Tasks</a>
+			<a class="topnav__link" href="#">Reporting</a>
+			<a class="topnav__link" href="#">Users</a>
+		</nav>
+
+		<div class="topbar__actions">
+			<button class="icon-btn" type="button" aria-label="Search">
+				<span class="icon">🔍</span>
+			</button>
+			<button class="icon-btn" type="button" aria-label="Settings">
+				<span class="icon">⚙️</span>
+			</button>
+			<button class="icon-btn" type="button" aria-label="Notifications">
+				<span class="icon">🔔</span>
+			</button>
+			<div class="avatar" aria-label="Profile">
+				<span>DS</span>
+			</div>
+		</div>
+	</header>
+
+	<main class="dash__content">
+		<section class="page-head">
+			<div>
+				<h1>Customers</h1>
+				<p class="subhead">Overview of customers and activity for this month.</p>
+			</div>
+			<div class="page-head__actions">
+				<button class="btn btn--ghost" type="button">Upload</button>
+				<button class="btn btn--primary" type="button">Add customer</button>
+			</div>
+		</section>
+
+		<section class="tabs" role="tablist">
+			<button class="tab is-active" type="button">Overview</button>
+			<button class="tab" type="button">Table</button>
+			<button class="tab" type="button">List view</button>
+			<button class="tab" type="button">Segment</button>
+		</section>
+
+		<section class="cards">
+			<article class="card">
+				<div class="card__icon">👤</div>
+				<div class="card__meta">
+					<p>Total customers</p>
+					<h2>2,420</h2>
+				</div>
+				<span class="chip chip--up">+20%</span>
+			</article>
+			<article class="card">
+				<div class="card__icon">👥</div>
+				<div class="card__meta">
+					<p>Members</p>
+					<h2>1,210</h2>
+				</div>
+				<span class="chip chip--up">+15%</span>
+			</article>
+			<article class="card">
+				<div class="card__icon">💻</div>
+				<div class="card__meta">
+					<p>Active now</p>
+					<h2>316</h2>
+				</div>
+				<div class="stack">
+					<span class="avatar avatar--xs">AR</span>
+					<span class="avatar avatar--xs">LM</span>
+					<span class="avatar avatar--xs">JW</span>
+					<span class="avatar avatar--xs">KT</span>
+				</div>
+			</article>
+		</section>
+
+		<section class="table-wrap">
+			<div class="table-head">
+				<div>
+					<h3>Customers (1,644)</h3>
+					<p class="muted">Customers that have purchased a subscription.</p>
+				</div>
+				<div class="table-actions">
+					<div class="search">
+						<span class="icon">🔍</span>
+						<input type="search" placeholder="Search" aria-label="Search customers" />
+					</div>
+					<button class="btn btn--ghost" type="button">Export to CSV</button>
+				</div>
+			</div>
+
+			<div class="filters">
+				<button class="pill is-active" type="button">View all</button>
+				<button class="pill" type="button">Your files</button>
+				<button class="pill" type="button">Shared files</button>
+				<div class="filters__right">
+					<button class="pill" type="button">Jan 1 - Jan 30</button>
+					<button class="pill" type="button">Dashboard 2.0</button>
+					<button class="pill" type="button">Add filter</button>
+				</div>
+			</div>
+
+			<table class="table">
+				<thead>
+					<tr class="table__row table__row--head">
+						<th class="cell">Customer ID</th>
+						<th class="cell">First Name</th>
+						<th class="cell">Last Name</th>
+						<th class="cell">Email</th>
+						<th class="cell">Contact</th>
+						<th class="cell">Address</th>
+						<th class="cell">Actions</th>
+					</tr>
+				</thead>
+				<tbody class="tablec">
+					<tr *ngFor="let customer of customerList">
+						<td>{{customer.customerId}}</td>
+						<td>{{customer.firstName}}</td>
+						<td>{{customer.lastName}}</td>
+						<td>{{customer.email}}</td>
+						<td>{{customer.phone}}</td>
+						<td>{{customer.address}}</td>
+						<td>
+							<button class="action-btn edit-btn" title="Edit">✎</button>
+							<button class="action-btn delete-btn" title="Delete">✕</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+</div>
