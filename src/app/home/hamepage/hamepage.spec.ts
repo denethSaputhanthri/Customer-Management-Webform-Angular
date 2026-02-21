@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Loginform } from './loginform';
+import { Hamepage } from './hamepage';
 
-describe('Loginform', () => {
-  let component: Loginform;
-  let fixture: ComponentFixture<Loginform>;
+describe('Hamepage', () => {
+  let component: Hamepage;
+  let fixture: ComponentFixture<Hamepage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Loginform]
+      imports: [Hamepage]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Loginform);
+    fixture = TestBed.createComponent(Hamepage);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
